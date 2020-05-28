@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background: #f1faee;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        a {
+            color: #f1faee;
+            text-decoration: none;
+            font-size: x-large;
+            background-color: #1d3557;
+            padding: 15px;
+            border-bottom: 7px solid #e63946
+        }
+
+        h2,h1 {
+            color: #1d3557;
+            font-weight: 100;
+            font-size: 40px;
+            margin: 40px 0px 20px;
+        }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #457b9d;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #f1faee;
+            display: inline-block;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PoxCounterDown Timer</h1>
+    <br>
+        <a href="https://github.com/Power50015/PoxCounterDown">For Download From Github</a>
+    <br>
+    <h2>PoxTimeCounterFormat1</h2>
+    <div id="clockdiv">
+        <div>
+            <span id="pox-year"></span>
+            <div class="smalltext">Years</div>
+        </div>
+        <div>
+            <span id="pox-month"></span>
+            <div class="smalltext">Months</div>
+        </div>
+        <div>
+            <span id="pox-day"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <span id="pox-hour"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span id="pox-minute"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span id="pox-second"></span>
+            <div class="smalltext">Second</div>
+        </div>
+        <div>
+            <span id="pox-millisecond"></span>
+            <div class="smalltext">Millisecond</div>
+        </div>
+        <br>
+    </div>
+    <h2>PoxTimeCounterFormat2</h2>
+    <div id="clockdiv">
+        <div>
+            <span id="pox-month2"></span>
+            <div class="smalltext">Months</div>
+        </div>
+        <div>
+            <span id="pox-day2"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <span id="pox-hour2"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span id="pox-minute2"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span id="pox-second2"></span>
+            <div class="smalltext">Second</div>
+        </div>
+        <div>
+            <span id="pox-millisecond2"></span>
+            <div class="smalltext">Millisecond</div>
+        </div>
+        <br>
+    </div>
+    <h2>PoxTimeCounterFormat3</h2>
+    <div id="clockdiv">
+        <div>
+            <span id="pox-day3"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <span id="pox-hour3"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span id="pox-minute3"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span id="pox-second3"></span>
+            <div class="smalltext">Second</div>
+        </div>
+        <div>
+            <span id="pox-millisecond3"></span>
+            <div class="smalltext">Millisecond</div>
+        </div>
+        <br>
+    </div>
+    <h2>PoxTimeCounterFormat4</h2>
+    <div id="clockdiv">
+        <div>
+            <span id="pox-hour4"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <span id="pox-minute4"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span id="pox-second4"></span>
+            <div class="smalltext">Second</div>
+        </div>
+        <div>
+            <span id="pox-millisecond4"></span>
+            <div class="smalltext">Millisecond</div>
+        </div>
+        <br>
+    </div>
+    <h2>PoxTimeCounterFormat5</h2>
+    <div id="clockdiv">
+        <div>
+            <span id="pox-minute5"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span id="pox-second5"></span>
+            <div class="smalltext">Second</div>
+        </div>
+        <div>
+            <span id="pox-millisecond5"></span>
+            <div class="smalltext">Millisecond</div>
+        </div>
+        <br>
+    </div>
+
+
+    <script src="../dist/pox.min.js"></script>
+    <script>
+        var time = new Date(2020, 12, 1, 17, 00, 00);
+        setInterval(function () {
+            var count1 = new PoxTimeCounterFormat1(time);
+            document.getElementById('pox-year').innerHTML = count1[0];
+            document.getElementById('pox-month').innerHTML = count1[1];
+            document.getElementById('pox-day').innerHTML = count1[2];
+            document.getElementById('pox-hour').innerHTML = count1[3];
+            document.getElementById('pox-minute').innerHTML = count1[4];
+            document.getElementById('pox-second').innerHTML = count1[5];
+            document.getElementById('pox-millisecond').innerHTML = count1[6];
+            var count2 = new PoxTimeCounterFormat2(time);
+            document.getElementById('pox-month2').innerHTML = count2[0];
+            document.getElementById('pox-day2').innerHTML = count2[1];
+            document.getElementById('pox-hour2').innerHTML = count2[2];
+            document.getElementById('pox-minute2').innerHTML = count2[3];
+            document.getElementById('pox-second2').innerHTML = count2[4];
+            document.getElementById('pox-millisecond2').innerHTML = count2[5];
+            var count3 = new PoxTimeCounterFormat3(time);
+            document.getElementById('pox-day3').innerHTML = count3[0];
+            document.getElementById('pox-hour3').innerHTML = count3[1];
+            document.getElementById('pox-minute3').innerHTML = count3[2];
+            document.getElementById('pox-second3').innerHTML = count3[3];
+            document.getElementById('pox-millisecond3').innerHTML = count3[4];
+            var count4 = new PoxTimeCounterFormat4(time);
+            document.getElementById('pox-hour4').innerHTML = count4[0];
+            document.getElementById('pox-minute4').innerHTML = count4[1];
+            document.getElementById('pox-second4').innerHTML = count4[2];
+            document.getElementById('pox-millisecond4').innerHTML = count4[3];
+            var count5 = new PoxTimeCounterFormat5(time);
+            document.getElementById('pox-minute5').innerHTML = count5[0];
+            document.getElementById('pox-second5').innerHTML = count5[1];
+            document.getElementById('pox-millisecond5').innerHTML = count5[2];
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "poxcounterdown",
+  "version": "1.0.0",
+  "description": "lightweight JavaScript countdown timer",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "lint": "eslint ./src/pox.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Power50015/PoxCounterDown.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Power50015/PoxCounterDown/issues"
+  },
+  "homepage": "https://github.com/Power50015/PoxCounterDown#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
